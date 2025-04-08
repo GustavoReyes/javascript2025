@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <button onclick="sumarDeNumeros()">Sumar</button>
+    <button onclick="multiplicarDeNumeros()">Multiplicar</button>
+    <button onclick="factorialNumero()">Factorial</button>
+    <button onclick="dividirDeNumeros()">Dividir</button>
+
+    <script>
+    function sumarDeNumeros(){
+        //Solicito la introducción de los números
+        let n1=prompt("Introduce el primer número: ");
+        let n2=prompt("Introduce el segundo número: ");
+        //Realizo la suma
+        let suma = parseInt(n1) + parseInt(n2);
+        //Muestro el resultado  
+        alert("El resultado de la suma es: " + suma);
+    }
+    function multiplicarDeNumeros(){
+        //Solicito los introducción de los números
+        let n1=prompt("Introduce el primer número: ");
+        let n2=prompt("Introduce el segundo número: ");
+        //Realizo la suma
+        let multi = n1*n2;
+        //Muestro el resultado  
+        alert("El resultado de la multiplicación es: " + multi);
+    }
+    function factorialNumero(){
+        //Solicito la introducción del número
+        let n1=prompt("Introduce número: ");
+        //Realizo el factorial
+        let factorial = 1;
+        for (let i = 1; i <= n1; i++) {
+            factorial *= i;
+        }
+        //Muestro el resultado  
+        alert("El resultado del factorial es: " + factorial);
+    }
+    function dividirDeNumeros(){
+        //Solicito la introducción de los números
+        let n1=prompt("Introduce el primer número: ");
+        let n2=prompt("Introduce el segundo número: ");
+        //Realizo la división
+        let division = n1/n2;
+        //Muestro el resultado  
+        alert("El resultado de la división es: " + division);
+    }
+    </script>
+</body>
+</html>

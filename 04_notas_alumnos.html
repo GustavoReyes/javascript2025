@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nuevaNota()">Nueva Nota</button>
+    <br><br>
+    <button onclick="totalAprobados()">Aprobados</button>
+    <button onClick="notaMedia()">Nota Media</button>
+    <button onclick="notaAlta()">Nota Alta</button>
+    <button onclick="notaBaja()">Nota Baja</button>
+
+
+    <script>
+        //array con notas
+        let notas = [7,5,2,4,9,6,1,3,4,8,7,6];        
+        function totalAprobados(){
+            let aprobados = 0;
+            // for (let i = 0; i < notas.length; i++) {
+            //     if (notas[i] >= 5) {
+            //         aprobados++;
+            //     }
+            // }
+            for(let n of notas){
+                if(n >= 5){
+                    aprobados++;
+                }
+            }
+            alert("El total de aprobados es: " + aprobados);
+        }
+        function notaMedia(){
+            let media= 0   
+        for (let n of notas){
+            media= media+n;
+        }
+        media= media/notas.length;
+        alert("La nota media es: " +media.toFixed(2));
+    }
+    function notaAlta(){
+        let alta = notas[0];
+        for (let n of notas){
+            if(n > alta){
+                alta = n;
+            }
+        }
+        alert("La nota más Alta es: " + alta);
+    }
+    function notaBaja(){
+        let baja = notas[0];
+        for(let n of notas){
+            if(n < baja){
+                baja = n;
+            }
+        }
+        alert("La nota más Baja es: " + baja);
+    }
+
+    function nuevaNota(){
+        let nota;
+        do{
+            nota = prompt("Introduce la nueva nota: ");
+        }while (nota < 0 || nota >10)
+        notas.push(parseInt(nota));
+        console.log(notas);
+    }
+    
+    
+    </script>
+</body>
+</html>
