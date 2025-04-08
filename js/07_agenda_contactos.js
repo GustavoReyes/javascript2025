@@ -1,10 +1,27 @@
 let nombres = []
 function guardar() {
-    n = document.getElementById("nombre").value;
-    nombres.push(n);
-    alert("Contacto Guardado");
-
+    /*  for (let n of nombres) {
+         if (n == document.getElementById("nombre").value) {
+             alert("Contacto existe");
+             return
+         }
+     } */
+    let n = document.getElementById("nombre").value;
+    let repetido = false
+    for (let nombre of nombres) {
+        if (nombre == n) {
+            repetido = true
+        }
+    }
+    if (repetido == false) {
+        nombres.push(n);
+        alert("Contacto Guardado")
+    }
+    else {
+        alert("No añadido, el contacto ya escite")
+    }
 }
+
 
 function mostrar() {
     let html = "";
