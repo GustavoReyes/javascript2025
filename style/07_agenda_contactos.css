@@ -72,3 +72,7 @@ button:hover {
     text-align: left;
     min-height: 50px;
 }
+
+img {
+    cursor: pointer;
+}
