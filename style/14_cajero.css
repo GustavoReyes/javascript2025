@@ -1,0 +1,128 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Section container */
+section {
+    display: inline-block;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Table container */
+#tabla {
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table headers */
+th {
+    color: #ffffff;
+    background-color: #007bff;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+/* Table cells */
+td {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-weight: normal;
+    border: 1px solid #ddd;
+}
+
+/* Highlight for positive and negative values */
+.negativo {
+    color: #d9534f; /* Red for negative values */
+}
+
+.positivo {
+    color: #5cb85c; /* Green for positive values */
+}
+
+/* Header styles */
+h1 {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Specific button styles */
+#ingresar {
+    background-color: #28a745;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#retirar {
+    background-color: #dc3545;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#grabarSaldo,
+#mostrar {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Table row hover effect */
+#tabla tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #tabla {
+        font-size: 12px;
+    }
+}

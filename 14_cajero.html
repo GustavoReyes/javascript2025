@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/14_cajero.css" />
+    <title>Cajero</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="superior">
+        <h1>BIENVENIDO A SU BANCO PERSONAL</h1>
+
+        <h3>SALDO INICIAL:</h3>
+        <input class="datos" type="number" id="saldoInicial" /><button
+          id="grabarSaldo"
+          class="grabar"
+          onclick="grabarDinero();"
+        >
+          GRABAR SALDO</button
+        ><br /><br />
+        <hr />
+      </div>
+
+      <div id="cuerpoOperaciones">
+        <section>
+          <h3>CANTIDAD</h3>
+          <input
+            class="datos"
+            type="number"
+            id="operaciones"
+            style="margin-right: 20px"
+            required
+          /><br />
+        </section>
+        <section>
+          <h3>CONCEPTO</h3>
+          <input class="datos" type="text" id="concepto" required /><br />
+        </section>
+        <br />
+        <button id="ingresar" onclick="ingresarDinero()">INGRESAR</button
+        ><button id="retirar" class="button.ingresar" onclick="retirarDinero()">
+          RETIRAR</button
+        ><br /><br />
+        <button
+          id="mostrar"
+          onclick="mostrarDinero()"
+          style="align-self: center"
+        >
+          MOSTRAR</button
+        ><br />
+        <hr />
+      </div>
+
+      <div id="cabez">
+        <table id="tabla"></table>
+      </div>
+    </div>
+    <script src="js/14_cajero.js"></script>
+  </body>
+</html>
