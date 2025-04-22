@@ -1,4 +1,4 @@
-let ciudades = ["Cáceres", "Ávila", "Córdova", "Zaragoza"];
+let ciudades = ["", "Cáceres", "Ávila", "Córdova", "Zaragoza", "Madrid", "Valencia", "Cáceres", "Madrid", "Ávila"];
 function ver() {
     let valor = document.getElementById("ciudades").ariaValueMax;
     console.log(valor)
@@ -8,8 +8,10 @@ function ver() {
 // a partir del array de cidudades
 
 function cargarCiudades() {
+    let conjunto = new Set(ciudades)
     let html = "";
-    for (let c of ciudades) {
+    for (let c of conjunto) {
         html = html + `<option>${c}</option>`;
     }
+    document.getElementById("ciudades").innerHTML = html;
 }
